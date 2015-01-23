@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+
+    <!-- styles --><% styles.forEach(function (file) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- scripts --><% scripts.forEach(function (file) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+  </head>
+
+  <body ng-app="app" ng-class="{loading: enableSpinner}">
+     <b>Title:</b>{{title}}
+  </body>
+</html>
