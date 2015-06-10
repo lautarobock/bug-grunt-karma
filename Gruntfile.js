@@ -46,16 +46,20 @@ module.exports = function(grunt) {
           'karma-jasmine',
           'karma-phantomjs-launcher'
         ],
-        files: [
-          '<%= prj.dependencies %>',
-          '<%= prj.devDependencies %>',
-          '<%= prj.files.src %>',
 
-          '<%= prj.files.srcTest %>'
-        ],
         singleRun: true
       },
-      build: {}
+      build: {
+          files: {
+              src: [
+                  '<%= prj.dependencies %>',
+                  '<%= prj.devDependencies %>',
+                  '<%= prj.files.src %>',
+
+                  '<%= prj.files.srcTest %>'
+              ]
+          }
+      }
     }
 
   });
